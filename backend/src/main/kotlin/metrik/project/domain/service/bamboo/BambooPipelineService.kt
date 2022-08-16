@@ -107,7 +107,7 @@ class BambooPipelineService(
     private fun getBuildDetails(
         pipeline: PipelineConfiguration,
         planKey: String,
-        buildNumber: Int,
+        buildNumber: Long,
         credential: String
     ): BuildDetailDTO? {
         val url = "${getDomain(pipeline.url)}/rest/api/latest/result/$planKey-$buildNumber.json?" +

@@ -23,7 +23,7 @@ data class BuildDetailDTO(
     var state: String,
     var buildState: String,
     var number: Int,
-    var buildNumber: Int,
+    var buildNumber: Long,
     var buildDuration: Long,
     var buildStartedTime: ZonedDateTime?,
     var link: Link,
