@@ -56,7 +56,7 @@ const PipelineSetup: FC<{
 	};
 
 	const onVerify = () => {
-		const { name, ...verification } = form.getFieldsValue();
+		const { ...verification } = form.getFieldsValue();
 
 		return verifyPipelineUsingPost({
 			verification,
@@ -145,6 +145,7 @@ const PipelineSetup: FC<{
 										<Option value={PipelineTool.GITHUB_ACTIONS}>
 											{PipelineTool.GITHUB_ACTIONS}
 										</Option>
+										<Option value={PipelineTool.TRAVIS_CI}>{PipelineTool.TRAVIS_CI}</Option>
 									</Select>
 								</Item>
 							</Col>

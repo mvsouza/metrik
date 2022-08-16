@@ -8,14 +8,17 @@ const devConfig = {
 	devServer: {
 		disableHostCheck: true,
 		contentBase: OUTPUT_PATH,
-		host: "localhost",
-		port: 2333,
+		host: "cos-metrik-frontend.herokuapp.com",
+		port: 443,
 		hot: true,
 		overlay: true,
 		open: true,
 		historyApiFallback: true,
 		proxy: {
-			"/api": "http://localhost:9000",
+			context: ["/api"],
+			target: "https://cos-metrik-backend.herokuapp.com",
+			secure: false,
+			changeOrigin: true,
 		},
 	},
 };

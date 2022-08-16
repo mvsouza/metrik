@@ -39,7 +39,7 @@ const minLengthForDisplayScrollBar = 10;
 const chartContainerStyle = css({
 	position: "relative",
 	height: 300,
-	"overflow-x": "auto",
+	"overflow-y": "scroll",
 });
 
 const yAxisStyles = css({
@@ -125,7 +125,8 @@ export const LineChart: FC<LineChartProps> = ({
 			<div css={chartContainerStyle}>
 				<ResponsiveContainer
 					id={"chartSvg"}
-					width={data.length >= minLengthForDisplayScrollBar ? scrollWidth : "100%"}>
+					width={data.length >= minLengthForDisplayScrollBar ? scrollWidth : "99.9%"}
+					height={"99.8%"}>
 					<RechartsLineChart
 						data={data}
 						margin={{

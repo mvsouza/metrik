@@ -4,15 +4,18 @@ import { BAMBOO_PIPELINE_CONFIG } from "./bambooConfig";
 import { GITHUB_ACTIONS_CONFIG } from "./githubActionsConfig";
 import { BAMBOO_DEPLOYED_PIPELINE_CONFIG } from "./bambooDeployedConfig";
 import { PipelineTool } from "../../models/pipeline";
+import { TRAVIS_CI_CONFIG } from "./travisCiConfig";
 
 export const PIPELINE_CONFIG = {
 	[PipelineTool.JENKINS]: JENKINS_PIPELINE_CONFIG,
 	[PipelineTool.BAMBOO]: BAMBOO_PIPELINE_CONFIG,
 	[PipelineTool.GITHUB_ACTIONS]: GITHUB_ACTIONS_CONFIG,
 	[PipelineTool.BAMBOO_DEPLOYMENT]: BAMBOO_DEPLOYED_PIPELINE_CONFIG,
+	[PipelineTool.TRAVIS_CI]: TRAVIS_CI_CONFIG,
 };
 
 export const PIPELINE_TYPE_NOTE = {
+	[PipelineTool.TRAVIS_CI]: undefined,
 	[PipelineTool.JENKINS]: undefined,
 	[PipelineTool.BAMBOO]: (
 		<div css={{ color: "rgba(0,0,0,0.25)", whiteSpace: "normal", marginBottom: 50 }}>
